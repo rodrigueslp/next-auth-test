@@ -1,6 +1,6 @@
 import { getSession } from 'next-auth/react';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8081';
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export async function fetchApi(endpoint: string, options?: RequestInit) {
   const session = await getSession();
