@@ -41,7 +41,7 @@ export default function LoginPage() {
           <Button 
               variant="outline" 
               className="w-full flex items-center justify-center gap-2 bg-white hover:bg-purple-50 border-purple-200"
-              onClick={() => window.location.href = '/api/auth/signin'}
+              onClick={() => signIn('google')}
             >
             <FcGoogle className="w-5 h-5" />
             Continuar com Google
