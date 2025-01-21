@@ -22,4 +22,5 @@ export interface GrowthDataPoint {
 export interface UploadPattern {
   hour: string;
   frequency: number;
+  percentage: number;  // Nova propriedade
 }

@@ -30,6 +30,7 @@ export interface ChannelStats {
 }
 
 export interface ChannelMetrics {
+  uploadPatternByHour: { [key: number]: number };
   channelId: string
   dailySubscriberGrowth: number
   weeklySubscriberGrowth: number
@@ -227,7 +228,7 @@ export const youtubeService = {
   },
 
   async getChannelStats(channelId: string) {
-    return fetchApi(`/api/youtube/channels/${channelId}/stats`) as Promise<ChannelStats[]>;
+    return fetchApi(`/api/metrics/channels/${channelId}/stats`) as Promise<ChannelStats[]>;
   },
 
   async analyzeAudienceBehavior(channelId: string) {
